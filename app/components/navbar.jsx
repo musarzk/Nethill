@@ -5,7 +5,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import Home from '../page';
+
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,13 +53,19 @@ export default function Header() {
       </header>
 
       {/* Navbar */}
-      <nav className="bg-white shadow-md p-4  pr-10 flex justify-between items-center">
+      <nav className="bg-white shadow-md p-2 pl-7  pr-10 flex justify-between items-center">
         {/* Logo */}
-        <div className="flex-shrink-0">
-          <Link href="/"><Image src="/logo.png" alt="Logo" width={120} height={25} className="hidden md:block" />
-          <Image src="/logo2.png" alt="Mobile Logo" width={120} height={25} className="md:hidden" />
+        <div className="flex-shrink-0 flex flex-col items-center space-y-1">
+          <Link href="/"><Image src="/logo.png" alt="Logo" width={130} height={20} className="hidden md:block" />
+          <Image src="/logo2.png" alt="Mobile Logo" width={150} height={30} className="md:hidden" />
+          <div  className="text-center text-gray-800 text-[11px] md:text-[12px]"
+      style={{ letterSpacing: "1.1em"  }} >
+      REALITY
+    </div>
         </Link>
         </div>
+        
+       
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6">
@@ -78,12 +84,47 @@ export default function Header() {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <ul className="md:hidden absolute top-16 left-0 w-full bg-white shadow-lg p-4 space-y-4 z-40">
-            <li ><Link href="/" className="block text-center hover:border-b-4 border-red-500 Hover:mb-0 focus:border-b-2" onClick={toggleMenu}>Home</Link></li>
-            <li><Link href="/about" className="block text-center hover:border-b-4 border-red-500 focus:border-b-2" onClick={toggleMenu}>About</Link></li>
-            <li><Link href="/services" className="block text-center hover:border-b-4 border-red-500 focus:border-b-2" onClick={toggleMenu}>Services</Link></li>
-            <li><Link href="/gallery" className="block text-center hover:border-b-4 border-red-500 focus:border-b-2" onClick={toggleMenu}>Gallery</Link></li>
-            <li><Link href="/contact" className="block text-center hover:border-b-4 border-red-500 focus:border-b-2" onClick={toggleMenu}>Contact</Link></li>
-          </ul>
+          <li>
+            <Link
+              href="/"
+              className="block text-center pb-2 border-b-2 border-transparent hover:border-red-500 transition-all duration-300"
+              onClick={toggleMenu}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/about"
+              className="block text-center pb-2 border-b-2 border-transparent hover:border-red-500 transition-all duration-300"
+              onClick={toggleMenu} >
+                 About
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/services"
+              className="block text-center pb-2 border-b-2 border-transparent hover:border-red-500 transition-all duration-300"
+              onClick={toggleMenu} >
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/gallery"
+              className="block text-center pb-2 border-b-2 border-transparent hover:border-red-500 transition-all duration-300"
+              onClick={toggleMenu}>
+              Gallery
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/contact"
+              className="block text-center pb-2 border-b-2 border-transparent hover:border-red-500 transition-all duration-300"
+              onClick={toggleMenu} >
+              Contact
+            </Link>
+          </li>
+        </ul>
         )}
       </nav>
     </div>

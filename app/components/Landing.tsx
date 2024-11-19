@@ -150,6 +150,7 @@ import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import ProductCarousel from "./productsandservices";
+import HeroSlide from "./Hero";
 
 import {
   AiOutlineArrowDown,
@@ -173,47 +174,29 @@ export default function Landingpage() {
   };
 
 
-  // Product and service logic
+ 
  
 
   return (
     <div className="text-gray-800 font-sans relative">
       {/* Hero Section */}
-      <section className="relative h-screen bg-cover bg-center flex items-center justify-center bg-[url('/hero-background.jpg')]">
-        <div className="absolute inset-0 bg-black opacity-30"></div>
-        <motion.div
-          className="relative z-10 text-center text-white mt-40"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to Nethill Ltd</h1>
-          <p className="text-lg md:text-2xl mb-6">For every transaction, absolute value for your assets is guaranteed.</p>
-          <button className="bg-blue-600 px-4 py-2 rounded-full text-white">Get Started</button>
-        </motion.div>
-        <motion.div
-          className="absolute inset-0 bg-fixed bg-cover bg-[url('/hero-background.jpg')]"
-          style={{ zIndex: -1 }}
-          animate={{ backgroundPositionY: ["0%", "50%"] }}
-          transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
-        />
-        <AiOutlineArrowDown
-          onClick={() => document.getElementById("footer-section")?.scrollIntoView({ behavior: "smooth" })}
-          className="absolute right-10 bottom-10 text-white text-4xl cursor-pointer animate-bounce"
-        />
-      </section>
+       
+      <HeroSlide/>
 
       {/* About Section */}
-      <section id="about-section" className="bg-gray-100 container-full mt-20 py-10 px-4 grid md:grid-cols-2 gap-8 relative">
+      <section id="about-section" className="bg-gray-100 container-full mt-20 py-5 px-4 pr-5 grid md:grid-cols-2 gap-8 relative">
         <motion.div
           className="flex flex-col justify-center px-10"
           initial={{ opacity: 1, x: 10 }}
           animate={{ opacity: 1, x: 10 }}
           transition={{ delay: 0, duration: 1 }}
         >
+          <div className="px-5">
+
           <h2 className="text-3xl font-semibold mb-4">We rank among the best Globally...</h2>
           <p>With expertise in product promotion and sales management, we connect you with the best in the market.</p>
           <button className="mt-4 bg-red-600 px-4 py-2 rounded-full text-white">Connect with Us</button>
+          </div>
         </motion.div>
         <motion.div
           initial={{ x: 100 }}

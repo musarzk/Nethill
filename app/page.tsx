@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Landing from "./components/Landing";
 
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 
 
 
