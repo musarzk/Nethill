@@ -16,7 +16,7 @@ const slideData: SlideData[] = [
   {
     image: '/about1.jpg',
     title: 'We rank among the best Globally...',
-    description: 'With expertise in the area of business of sales of all kind properties, sales of investment in real-estate, Sales of household security door handle and more….',
+    description: 'With expertise in the area of business such as sales of all kind properties, sales of investment in real-estate, Sales of household security door handle and more….',
   },
   {
     image: '/landcracker.jpg',
@@ -54,7 +54,7 @@ export default function AboutSection() {
         
         <div className="px-5">
           <h4 className="text-4xl font-bold mb-4">{slideData[currentSlide].title}</h4>
-          <p>{slideData[currentSlide].description}</p>
+          <p className="text-lg" >{slideData[currentSlide].description}</p>
           <Button className="mt-4 bg-red-600 text-white hover:bg-red-700">Read more...</Button>
         </div>
       </motion.div>
