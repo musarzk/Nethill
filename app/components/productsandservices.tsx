@@ -75,7 +75,7 @@ export default function ProductCarousel() {
                   </Link>
                 </CardContent>
                 <CardFooter className="flex justify-between items-center mt-auto">
-                  <span className="text-lg font-bold">${product.price.toFixed(2)}</span>
+                  <span className="text-lg font-bold">N{product.price.toFixed(2)}</span>
                 </CardFooter>
               </Card>
             </div>

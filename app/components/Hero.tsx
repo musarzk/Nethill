@@ -115,15 +115,18 @@
 // }
 
 
+// ................WORKING CODE..........................
+
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
+import Link from 'next/link';
 
 const heroData = [
   {
     id: 1,
     type: 'image',
-    src: '/hero-background1.jpg',
+    src: '/hero-background01.jpg',
     title: 'Welcome to Nethill Ltd',
     subtitle: 'For every transaction, absolute value for your assets is guaranteed.',
   },
@@ -150,6 +153,13 @@ const heroData = [
   },
   {
     id: 5,
+    type: 'image',
+    src: '/hero-background1.jpg',
+    title: 'Your Trusted Partner',
+    subtitle: 'Empowering your journey towards greatness.',
+  },
+  {
+    id: 6,
     type: 'video',
     src: 'UpBmpJiMZIc', // YouTube video ID
     title: 'Reliable Investment partner',
@@ -230,6 +240,7 @@ export default function HeroSection() {
           {heroData[currentSlide]?.title}
         </h1>
         <p className="text-lg md:text-2xl mb-6">{heroData[currentSlide]?.subtitle}</p>
+        <Link href="#Contact-us">
         <motion.button 
           className="bg-blue-600 px-6 py-3 rounded-full text-white font-semibold hover:bg-blue-700 transition-colors"
           whileHover={{ scale: 1.05 }}
@@ -237,6 +248,7 @@ export default function HeroSection() {
         >
           Get Started
         </motion.button>
+          </Link>
       </motion.div>
 
       {/* Slide Indicators */}
@@ -271,3 +283,4 @@ export default function HeroSection() {
     </section>
   );
 }
+

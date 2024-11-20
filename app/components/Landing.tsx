@@ -158,6 +158,7 @@ import {
   AiOutlineArrowLeft,
   AiOutlineArrowRight,
 } from "react-icons/ai";
+import AboutSection from "./About";
 
 
 export default function Landingpage() {
@@ -184,7 +185,8 @@ export default function Landingpage() {
       <HeroSlide/>
 
       {/* About Section */}
-      <section id="about-section" className="bg-gray-100 container-full mt-20 py-5 px-4 pr-5 grid md:grid-cols-2 gap-8 relative">
+      
+      {/* <section id="about-section" className="bg-gray-100 container-full mt-20 py-5 px-4 pr-5 grid md:grid-cols-2 gap-8 relative">
         <motion.div
           className="flex flex-col justify-center px-10"
           initial={{ opacity: 1, x: 10 }}
@@ -193,9 +195,9 @@ export default function Landingpage() {
         >
           <div className="px-5">
 
-          <h2 className="text-3xl font-semibold mb-4">We rank among the best Globally...</h2>
+          <h4 className="text-4xl font-bold mb-4">We rank among the best Globally...</h4>
           <p>With expertise in product promotion and sales management, we connect you with the best in the market.</p>
-          <button className="mt-4 bg-red-600 px-4 py-2 rounded-full text-white">Connect with Us</button>
+          <button className="mt-4 bg-red-600 px-4 py-2 rounded-full text-white">Read more...</button>
           </div>
         </motion.div>
         <motion.div
@@ -214,7 +216,9 @@ export default function Landingpage() {
             <AiOutlineArrowRight size={24} />
           </button>
         </motion.div>
-      </section>
+      </section> */}
+
+      <AboutSection/>
 
      <ProductCarousel/>
 
@@ -245,7 +249,7 @@ export default function Landingpage() {
       </section>
 
       {/* Contact Section */}
-      <section className="bg-white py-10 md:py-16">
+      <section id="Contact-us" className="bg-white py-10 md:py-16">
         <h2 className="text-center text-2xl md:text-3xl font-semibold mb-8">Contact Us</h2>
         <form className="max-w-xl mx-auto bg-gray-100 p-8 rounded-lg shadow-lg space-y-4">
           <input type="text" name="name" placeholder="Your Name" required className="w-full p-3 border border-gray-300 rounded-lg" />
