@@ -127,8 +127,8 @@ const heroData = [
     id: 1,
     type: 'image',
     src: '/hero-background01.jpg',
-    title: 'Welcome to Nethill Ltd',
-    subtitle: 'For every transaction, absolute value for your assets is guaranteed.',
+    title: 'Welcome to Nethill Ltd RC no: 168235',
+    subtitle: 'The Most Reliable Real-estate firm, Sales and More…..',
   },
   {
     id: 2,
@@ -149,14 +149,14 @@ const heroData = [
     type: 'video',
     src: 'UpBmpJiMZIc', // YouTube video ID
     title: 'Innovative Solutions',
-    subtitle: 'Let us create a future of endless possibilities.',
+    subtitle: 'We create a future of endless possibilities',
   },
   {
     id: 5,
     type: 'image',
     src: '/hero-background1.jpg',
     title: 'Your Trusted Partner',
-    subtitle: 'Empowering your journey towards greatness.',
+    subtitle: 'With your .',
   },
   {
     id: 6,
@@ -202,7 +202,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
+    <section className="relative h-[90vh] w-full overflow-hidden flex items-center justify-center">
       {/* Background Slides */}
       <AnimatePresence>
         {heroData.map((slide, index) =>

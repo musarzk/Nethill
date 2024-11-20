@@ -33,17 +33,17 @@ export default function Header() {
 
           {/* Social Icons - Hidden on small screens */}
           <div className="hidden md:flex flex-row space-x-3">
-            <Link href="https://facebook.com" legacyBehavior>
+            <Link href="https://facebook.com/nethillproperties" legacyBehavior>
               <a target="_blank" className="cursor-pointer text-white transition-transform transform hover:scale-110">
                 <FaFacebookF size={20} />
               </a>
             </Link>
-            <Link href="https://twitter.com" legacyBehavior>
+            <Link href="https://www.instagram.com/nethillproperties/" legacyBehavior>
               <a target="_blank" className="cursor-pointer text-white transition-transform transform hover:scale-110">
                 <FaInstagram size={24} />
               </a>
             </Link>
-            <Link href="https://instagram.com" legacyBehavior>
+            <Link href="https://www.youtube.com/@RealEstateWithNsa" legacyBehavior>
               <a target="_blank" className="cursor-pointer text-white transition-transform transform hover:scale-110">
                 <FaYoutube size={24} />
               </a>
@@ -69,11 +69,11 @@ export default function Header() {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6">
-          <li><Link href="/" className=" hover:border-b-4 border-red-500 focus:border-b-2">Home</Link></li>
-          <li><Link href="/about" className="hover:border-b-4 border-red-500 focus:border-b-2">About</Link></li>
-          <li><Link href="/services" className="hover:border-b-4 border-red-500 focus:border-b-2">Services</Link></li>
-          <li><Link href="/gallery" className="hover:border-b-4 border-red-500 focus:border-b-2">Gallery</Link></li>
-          <li><Link href="/contact" className="hover:border-b-4 border-red-500 focus:border-b-2">Contact</Link></li>
+          <li><Link href="/" className="hover:border-b-4 border-red-500 focus:border-b-2 focus:text-red-500">HOME</Link></li>
+          <li><Link href="/about" className="hover:border-b-4 border-red-500 focus:border-b-2 focus:text-red-500">ABOUT</Link></li>
+          <li><Link href="/services" className="hover:border-b-4 border-red-500 focus:border-b-2 focus:text-red-500">SERVICES</Link></li>
+          <li><Link href="/gallery" className="hover:border-b-4 border-red-500 focus:border-b-2 focus:text-red-500">GALARY</Link></li>
+          <li><Link href="/contact" className="hover:border-b-4 border-red-500 focus:border-b-2 focus:text-red-500">CONTACT US</Link></li>
         </ul>
 
         {/* Mobile Menu Icon */}
@@ -89,7 +89,7 @@ export default function Header() {
               href="/"
               className="block text-center pb-2 border-b-2 border-transparent hover:border-red-500 transition-all duration-300"
               onClick={toggleMenu}>
-              Home
+             HOME
             </Link>
           </li>
           <li>
@@ -97,7 +97,7 @@ export default function Header() {
               href="/about"
               className="block text-center pb-2 border-b-2 border-transparent hover:border-red-500 transition-all duration-300"
               onClick={toggleMenu} >
-                 About
+                 ABOUT
             </Link>
           </li>
           <li>
@@ -105,7 +105,7 @@ export default function Header() {
               href="/services"
               className="block text-center pb-2 border-b-2 border-transparent hover:border-red-500 transition-all duration-300"
               onClick={toggleMenu} >
-              Services
+             SERVICES
             </Link>
           </li>
           <li>
@@ -113,7 +113,7 @@ export default function Header() {
               href="/gallery"
               className="block text-center pb-2 border-b-2 border-transparent hover:border-red-500 transition-all duration-300"
               onClick={toggleMenu}>
-              Gallery
+              GALARY
             </Link>
           </li>
           <li>
@@ -121,7 +121,7 @@ export default function Header() {
               href="/contact"
               className="block text-center pb-2 border-b-2 border-transparent hover:border-red-500 transition-all duration-300"
               onClick={toggleMenu} >
-              Contact
+              CONTACT US
             </Link>
           </li>
         </ul>

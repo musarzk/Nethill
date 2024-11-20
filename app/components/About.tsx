@@ -16,15 +16,15 @@ const slideData: SlideData[] = [
   {
     image: '/about1.jpg',
     title: 'We rank among the best Globally...',
-    description: 'With expertise in product promotion and sales management, we connect you with the best in the market.',
+    description: 'With expertise in the area of business of sales of all kind properties, sales of investment in real-estate, Sales of household security door handle and more….',
   },
   {
-    image: '/about2.jpg',
+    image: '/landcracker.jpg',
     title: 'Innovation at its core',
     description: 'Our cutting-edge solutions drive growth and efficiency for businesses worldwide.',
   },
   {
-    image: '/about3.jpg',
+    image: '/landb.jpg',
     title: 'Customer-centric approach',
     description: 'We prioritize your needs and deliver tailored solutions to ensure your success.',
   },
@@ -42,7 +42,9 @@ export default function AboutSection() {
   }
 
   return (
-    <section id="about-section" className="bg-gray-100 container-full mt-20 py-5 px-4 pr-5 grid md:grid-cols-2 gap-8 relative">
+    <section>
+    {/* <h2 className="text-center text-3xl font-semibold mt-20 mb-8 text-4lg">About Us</h2> */}
+    <div id="about-section" className="bg-gray-100 container-full mt-10 py-5 px-4 pr-5 grid md:grid-cols-2 gap-8 relative">
       <motion.div
         className="flex flex-col justify-center px-10"
         initial={{ opacity: 0, x: -10 }}
@@ -96,6 +98,7 @@ export default function AboutSection() {
           <ChevronRight className="h-4 w-4" />
         </Button>
       </motion.div>
+    </div>
     </section>
   )
 }
