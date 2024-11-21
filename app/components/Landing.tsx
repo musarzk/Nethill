@@ -160,6 +160,7 @@ import {
 } from "react-icons/ai";
 import AboutSection from "./About";
 import Testimonials from "./Testimonial";
+import { Footer } from "./Footer";
 
 
 export default function Landingpage() {
@@ -264,7 +265,7 @@ export default function Landingpage() {
       </section>
 
       {/* Footer Section */}
-      <footer id="footer-section" className="bg-gray-800 text-gray-300 py-8 relative">
+      {/* <footer id="footer-section" className="bg-gray-800 text-gray-300 py-8 relative">
         <div className="container mx-auto text-center space-y-4">
           <Image src="/logo.png" alt="Logo" width={70} height={20} className="mx-auto"/>
           <div className="grid md:grid-cols-3 gap-4 text-sm">
@@ -296,7 +297,9 @@ export default function Landingpage() {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="absolute right-10 bottom-10 text-white text-4xl cursor-pointer animate-bounce"
         />
-      </footer>
+      </footer> */}
+
+      <Footer/>
     </div>
   );
 }
