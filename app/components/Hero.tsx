@@ -121,14 +121,16 @@ import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 import Link from 'next/link';
+import { register } from 'module';
 
 const heroData = [
   {
     id: 1,
     type: 'image',
     src: '/hero-background01.jpg',
-    title: 'Welcome to Nethill Ltd RC no: 168235',
-    subtitle: 'The Most Reliable Real-estate firm, Sales and More…..',
+    title: 'Welcome to Nethill Ltd',
+    register: 'RC no: 168235',
+    subtitle: 'The Most Reliable Real-estate firm, Sales and More...',
   },
   {
     id: 2,
@@ -155,8 +157,8 @@ const heroData = [
     id: 5,
     type: 'image',
     src: '/hero-background1.jpg',
-    title: 'Your Trusted Partner',
-    subtitle: 'With your .',
+    title: 'Connect with professionals ',
+    subtitle: 'With high integrity and values for your needs.',
   },
   {
     id: 6,
@@ -239,6 +241,7 @@ export default function HeroSection() {
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           {heroData[currentSlide]?.title}
         </h1>
+        <div className="text-lg md:text-xl">{heroData[currentSlide]?.register}</div>
         <p className="text-lg md:text-2xl mb-6">{heroData[currentSlide]?.subtitle}</p>
         <Link href="#Contact-us">
         <motion.button 

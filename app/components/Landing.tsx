@@ -159,6 +159,7 @@ import {
   AiOutlineArrowRight,
 } from "react-icons/ai";
 import AboutSection from "./About";
+import Testimonials from "./Testimonial";
 
 
 export default function Landingpage() {
@@ -223,7 +224,8 @@ export default function Landingpage() {
      <ProductCarousel/>
 
       {/* Testimonials Section */}
-      <section className="bg-gray-100 py-16">
+
+      {/* <section className="bg-gray-100 py-16">
         <h2 className="text-center text-3xl font-semibold mb-8">Testimonials</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
           {[1, 2, 3].map((item, index) => (
@@ -246,7 +248,9 @@ export default function Landingpage() {
             </motion.div>
           ))}
         </div>
-      </section>
+      </section> */}
+
+<Testimonials/>
 
       {/* Contact Section */}
       <section id="Contact-us" className="bg-white py-10 md:py-16">
