@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "embla-carousel-react": "^8.5.1",
     "framer-motion": "^11.11.17",
     "next": "15.0.2",
     "nodemailer": "^6.9.16",
@@ -29,9 +28,6 @@
     "typescript": "^5"
   },
   "resolutions": {
-  "react": "19.0.0-rc.0"
-}
-
-  
-
+    "react": "19.0.0-rc.0"
+  }
 }
