@@ -121,7 +121,7 @@ import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 import Link from 'next/link';
-import { register } from 'module';
+
 
 const heroData = [
   {
