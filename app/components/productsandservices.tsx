@@ -7,12 +7,33 @@ import { Card, CardContent, CardFooter } from './card';
 import Link from 'next/link';
 
 const products = [
-  { id: 1, name: 'Service 1', description: 'Detailed description for Service 1.', price: 19.99, image: '/service1.jpg' },
-  { id: 2, name: 'Service 2', description: 'Detailed description for Service 2.', price: 29.99, image: '/service2.jpg' },
-  { id: 3, name: 'Service 3', description: 'Detailed description for Service 3.', price: 39.99, image: '/service3.jpg' },
-  { id: 4, name: 'Service 4', description: 'Detailed description for Service 4.', price: 49.99, image: '/service4.jpg' },
-  { id: 5, name: 'Service 5', description: 'Detailed description for Service 5.', price: 59.99, image: '/service5.jpg' },
-  { id: 6, name: 'Service 6', description: 'Detailed description for Service 6.', price: 69.99, image: '/service6.jpg' },
+  { id: 1, name: 'Property evaluation',
+     description: 'Discover Your Properties True Value with Ease!.', 
+     price: 19.99, image: '/value.jpg' 
+    },
+  { id: 2, name: 'Sales and Marketing', 
+    description: 'Looking to boost your business revenue, and reach your target audience?.', 
+    price: 29.99, 
+    image: '/sales.jpg'
+   },
+  { id: 3, name: 'Investment Advisory ', 
+    description: 'Secure Your Financial Future with Expert Investment Advisory!.', 
+    price: 39.99, 
+    image: '/invest.jpg' 
+  },
+  { id: 4, name: 'Property brokerages and Lease to sublet', 
+    description: 'Looking to buy, sell, or lease property with confidence?.', 
+    price: 49.99, image: '/broker.jpg' 
+  },
+  { id: 5, name: 'Interior design and Renovation', 
+    description: 'Ready to turn your house into your dream home?.', 
+    price: 59.99, image: '/interior.jpg' 
+  },
+  { id: 6, name: 'Project and property management', 
+    description: 'Looking for a partner to streamline your property and project needs?.', 
+    price: 69.99, 
+    image: '/manage.jpg' 
+  },
 ];
 
 const useCarousel = (autoplayInterval = 4000) => {
@@ -75,7 +96,7 @@ export default function ProductCarousel() {
                   </Link>
                 </CardContent>
                 <CardFooter className="flex justify-between items-center mt-auto">
-                  <span className="text-lg font-bold">${product.price.toFixed(2)}</span>
+                  {/* <span className="text-lg font-bold">N{product.price.toFixed(2)}</span> */}
                 </CardFooter>
               </Card>
             </div>
@@ -85,13 +106,13 @@ export default function ProductCarousel() {
 
       {/* Navigation Arrows */}
       <button
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2 hover:bg-gray-700"
+        className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-300 text-white rounded-full p-2 hover:bg-gray-400"
         onClick={() => scrollTo((selectedIndex - 1 + products.length) % products.length)}
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
       <button
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2 hover:bg-gray-700"
+        className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-300 text-white rounded-full p-2 hover:bg-gray-400"
         onClick={() => scrollTo((selectedIndex + 1) % products.length)}
       >
         <ChevronRight className="w-6 h-6" />

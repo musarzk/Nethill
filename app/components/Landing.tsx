@@ -150,6 +150,7 @@ import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import ProductCarousel from "./productsandservices";
+import HeroSlide from "./Hero";
 
 import {
   AiOutlineArrowDown,
@@ -157,6 +158,9 @@ import {
   AiOutlineArrowLeft,
   AiOutlineArrowRight,
 } from "react-icons/ai";
+import AboutSection from "./About";
+import Testimonials from "./Testimonial";
+import { Footer } from "./Footer";
 
 
 export default function Landingpage() {
@@ -173,47 +177,30 @@ export default function Landingpage() {
   };
 
 
-  // Product and service logic
+ 
  
 
   return (
     <div className="text-gray-800 font-sans relative">
       {/* Hero Section */}
-      <section className="relative h-screen bg-cover bg-center flex items-center justify-center bg-[url('/hero-background.jpg')]">
-        <div className="absolute inset-0 bg-black opacity-30"></div>
-        <motion.div
-          className="relative z-10 text-center text-white mt-40"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to Nethill Ltd</h1>
-          <p className="text-lg md:text-2xl mb-6">For every transaction, absolute value for your assets is guaranteed.</p>
-          <button className="bg-blue-600 px-4 py-2 rounded-full text-white">Get Started</button>
-        </motion.div>
-        <motion.div
-          className="absolute inset-0 bg-fixed bg-cover bg-[url('/hero-background.jpg')]"
-          style={{ zIndex: -1 }}
-          animate={{ backgroundPositionY: ["0%", "50%"] }}
-          transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
-        />
-        <AiOutlineArrowDown
-          onClick={() => document.getElementById("footer-section")?.scrollIntoView({ behavior: "smooth" })}
-          className="absolute right-10 bottom-10 text-white text-4xl cursor-pointer animate-bounce"
-        />
-      </section>
+       
+      <HeroSlide/>
 
       {/* About Section */}
-      <section id="about-section" className="bg-gray-100 container-full mt-20 py-10 px-4 grid md:grid-cols-2 gap-8 relative">
+      
+      {/* <section id="about-section" className="bg-gray-100 container-full mt-20 py-5 px-4 pr-5 grid md:grid-cols-2 gap-8 relative">
         <motion.div
           className="flex flex-col justify-center px-10"
           initial={{ opacity: 1, x: 10 }}
           animate={{ opacity: 1, x: 10 }}
           transition={{ delay: 0, duration: 1 }}
         >
-          <h2 className="text-3xl font-semibold mb-4">We rank among the best Globally...</h2>
+          <div className="px-5">
+
+          <h4 className="text-4xl font-bold mb-4">We rank among the best Globally...</h4>
           <p>With expertise in product promotion and sales management, we connect you with the best in the market.</p>
-          <button className="mt-4 bg-red-600 px-4 py-2 rounded-full text-white">Connect with Us</button>
+          <button className="mt-4 bg-red-600 px-4 py-2 rounded-full text-white">Read more...</button>
+          </div>
         </motion.div>
         <motion.div
           initial={{ x: 100 }}
@@ -231,12 +218,15 @@ export default function Landingpage() {
             <AiOutlineArrowRight size={24} />
           </button>
         </motion.div>
-      </section>
+      </section> */}
+
+      <AboutSection/>
 
      <ProductCarousel/>
 
       {/* Testimonials Section */}
-      <section className="bg-gray-100 py-16">
+
+      {/* <section className="bg-gray-100 py-16">
         <h2 className="text-center text-3xl font-semibold mb-8">Testimonials</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
           {[1, 2, 3].map((item, index) => (
@@ -259,10 +249,12 @@ export default function Landingpage() {
             </motion.div>
           ))}
         </div>
-      </section>
+      </section> */}
+
+<Testimonials/>
 
       {/* Contact Section */}
-      <section className="bg-white py-10 md:py-16">
+      <section id="Contact-us" className="bg-white py-10 md:py-16">
         <h2 className="text-center text-2xl md:text-3xl font-semibold mb-8">Contact Us</h2>
         <form className="max-w-xl mx-auto bg-gray-100 p-8 rounded-lg shadow-lg space-y-4">
           <input type="text" name="name" placeholder="Your Name" required className="w-full p-3 border border-gray-300 rounded-lg" />
@@ -273,7 +265,7 @@ export default function Landingpage() {
       </section>
 
       {/* Footer Section */}
-      <footer id="footer-section" className="bg-gray-800 text-gray-300 py-8 relative">
+      {/* <footer id="footer-section" className="bg-gray-800 text-gray-300 py-8 relative">
         <div className="container mx-auto text-center space-y-4">
           <Image src="/logo.png" alt="Logo" width={70} height={20} className="mx-auto"/>
           <div className="grid md:grid-cols-3 gap-4 text-sm">
@@ -305,7 +297,9 @@ export default function Landingpage() {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="absolute right-10 bottom-10 text-white text-4xl cursor-pointer animate-bounce"
         />
-      </footer>
+      </footer> */}
+
+      <Footer/>
     </div>
   );
 }
