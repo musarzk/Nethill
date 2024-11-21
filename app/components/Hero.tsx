@@ -121,7 +121,7 @@ import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 import Link from 'next/link';
-
+import { register } from 'module';
 
 const heroData = [
   {
@@ -241,7 +241,7 @@ export default function HeroSection() {
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           {heroData[currentSlide]?.title}
         </h1>
-        <div className="text-lg md:text-xl">{heroData[currentSlide]?.register}</div>
+        
         <p className="text-lg md:text-2xl mb-6">{heroData[currentSlide]?.subtitle}</p>
         <Link href="#Contact-us">
         <motion.button 
