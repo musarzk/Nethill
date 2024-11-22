@@ -186,7 +186,7 @@ export default function Testimonials() {
                       height={80}
                       className="rounded-full mb-4"
                     />
-                    <p className="italic text-gray-600 mb-4">"{feedback}"</p>
+                    <p className="italic text-gray-600 mb-4">&quot{feedback}&quot</p>
                     <span className="font-semibold">- {name}</span>
                   </div>
                 </div>

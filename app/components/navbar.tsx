@@ -1,7 +1,7 @@
 "use client";
 
 import { AiOutlinePhone, AiOutlineMail, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
