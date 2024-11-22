@@ -157,7 +157,7 @@ const products = [
     price: 49.99, image: 'broker.jpg' },
   { id: 5, name: 'Interior design and Renovation', 
     description: 'Ready to turn your house into your dream home?.', 
-    price: 59.99, image: '/interior.jpg' },
+    price: 59.99, image: 'interior.jpg' },
   { id: 6, name: 'Project and property management', 
     description: 'Looking for a partner to streamline your property and project needs?.', 
     price: 69.99, image: 'manage.jpg' },
