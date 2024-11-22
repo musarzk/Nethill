@@ -88,7 +88,7 @@ const Testimonials = () => {
                 height={80}
                 className="rounded-full mb-4"
               />
-              <p className="italic text-gray-600">"{feedback}"</p>
+              <p className="italic text-gray-600">&quot;{feedback}&quot;</p>
               <span className="block mt-4 font-semibold">- {name}</span>
             </div>
           ))}
