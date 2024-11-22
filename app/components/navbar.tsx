@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 
-export default function Header() {
+export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
