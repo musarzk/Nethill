@@ -140,7 +140,7 @@ const heroData = [
   {
     id: 3,
     type: 'image',
-    src: '/hero-background3.jpg',
+    src: 'hero-background3.jpg',
     title: 'Your Trusted Partner',
     subtitle: 'Empowering your journey towards greatness.',
   },
