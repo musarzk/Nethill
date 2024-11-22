@@ -1,11 +1,13 @@
+
+
 "use client";
 
 import Link from "next/link";
-import { Facebook, Instagram, Youtube, MapPin } from "lucide-react";
+import { AiFillFacebook, AiFillInstagram, AiFillYoutube, AiOutlineEnvironment, AiOutlineArrowUp } from "react-icons/ai";
 
 export function Footer() {
   return (
-    <footer className="bg-[#d3ede1] px-6 py-12 rounded-t-3xl">
+    <footer id="footer" className="bg-[#d3ede1] px-6 py-12 rounded-t-3xl relative">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Sections */}
         <div>
@@ -37,7 +39,7 @@ export function Footer() {
         <div>
           <h2 className="text-2xl font-serif mb-4">Contact</h2>
           <div className="flex items-start gap-2">
-            <MapPin className="w-6 h-6 mt-1 flex-shrink-0" />
+            <AiOutlineEnvironment className="w-6 h-6 mt-1 flex-shrink-0" />
             <address className="not-italic text-lg">
               Suite 422 Roc Ages Plaza<br />
               Plots 247 Mafemi Crescent,<br />
@@ -62,7 +64,7 @@ export function Footer() {
             rel="noopener noreferrer"
             className="bg-[#4267B2] p-2 rounded-md hover:opacity-90 transition-opacity"
           >
-            <Facebook className="w-5 h-5 text-white" />
+            <AiFillFacebook className="w-5 h-5 text-white" />
           </Link>
           <Link 
             href="https://www.instagram.com/nethillproperties/" 
@@ -70,7 +72,7 @@ export function Footer() {
             rel="noopener noreferrer"
             className="bg-gray-600 p-2 rounded-md hover:opacity-90 transition-opacity"
           >
-            <Instagram className="w-5 h-5 text-white" />
+            <AiFillInstagram className="w-5 h-5 text-white" />
           </Link>
           <Link 
             href="https://www.youtube.com/@RealEstateWithNsa" 
@@ -78,10 +80,14 @@ export function Footer() {
             rel="noopener noreferrer"
             className="bg-[#FF0000] p-2 rounded-md hover:opacity-90 transition-opacity"
           >
-            <Youtube className="w-5 h-5 text-white" />
+            <AiFillYoutube className="w-5 h-5 text-white" />
           </Link>
         </div>
       </div>
+      <AiOutlineArrowUp
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="absolute right-10 bottom-10 text-black text-4xl cursor-pointer animate-bounce"
+      />
     </footer>
   );
 }

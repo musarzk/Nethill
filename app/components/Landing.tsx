@@ -146,7 +146,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+
 import Image from "next/image";
 import Link from "next/link";
 import ProductCarousel from "./productsandservices";
@@ -164,18 +164,6 @@ import { Footer } from "./Footer";
 
 
 export default function Landingpage() {
-
-  
-  const aboutImageRef = useRef<HTMLDivElement>(null);
-  const controls = useAnimation();
-  
-  const scrollAboutImage = (direction: string) => {
-    if (aboutImageRef.current) {
-      const scrollAmount = direction === "left" ? -300 : 300;
-      aboutImageRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    }
-  };
-
 
  
  
