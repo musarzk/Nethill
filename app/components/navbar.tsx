@@ -57,7 +57,7 @@ export default function Header() {
         {/* Logo */}
         <div className="flex-shrink-0 flex flex-col items-center space-y-1">
           <Link href="/"><Image src="/logo.png" alt="Logo" width={130} height={20} className="hidden md:block" />
-          <Image src="/logo2.png" alt="Mobile Logo" width={150} height={30} className="md:hidden" />
+          <Image src="logo2.png" alt="Mobile Logo" width={150} height={30} className="md:hidden" />
           <div  className="text-center text-gray-800 text-[11px] md:text-[12px]"
       style={{ letterSpacing: "1.1em"  }} >
       REALITY
