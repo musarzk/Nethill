@@ -143,12 +143,24 @@ import Image from 'next/image';
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 
 const products = [
-  { id: 1, name: 'Property evaluation', description: 'Discover Your Properties True Value with Ease!.', price: 19.99, image: '/value.jpg' },
-  { id: 2, name: 'Sales and Marketing', description: 'Looking to boost your business revenue, and reach your target audience?.', price: 29.99, image: '/sales.jpg' },
-  { id: 3, name: 'Investment Advisory ', description: 'Secure Your Financial Future with Expert Investment Advisory!.', price: 39.99, image: '/invest.jpg' },
-  { id: 4, name: 'Property brokerages and Lease to sublet', description: 'Looking to buy, sell, or lease property with confidence?.', price: 49.99, image: '/broker.jpg' },
-  { id: 5, name: 'Interior design and Renovation', description: 'Ready to turn your house into your dream home?.', price: 59.99, image: '/interior.jpg' },
-  { id: 6, name: 'Project and property management', description: 'Looking for a partner to streamline your property and project needs?.', price: 69.99, image: '/manage.jpg' },
+  { id: 1, name: 'Property evaluation', 
+    description: 'Discover Your Properties True Value with Ease!.',
+     price: 19.99, image: 'value.jpg' },
+  { id: 2, name: 'Sales and Marketing', 
+    description: 'Looking to boost your business revenue, and reach your target audience?.', 
+    price: 29.99, image: 'sales.jpg' },
+  { id: 3, name: 'Investment Advisory ',
+     description: 'Secure Your Financial Future with Expert Investment Advisory!.', 
+     price: 39.99, image: 'invest.jpg' },
+  { id: 4, name: 'Property brokerages and Lease to sublet', 
+    description: 'Looking to buy, sell, or lease property with confidence?.', 
+    price: 49.99, image: 'broker.jpg' },
+  { id: 5, name: 'Interior design and Renovation', 
+    description: 'Ready to turn your house into your dream home?.', 
+    price: 59.99, image: '/interior.jpg' },
+  { id: 6, name: 'Project and property management', 
+    description: 'Looking for a partner to streamline your property and project needs?.', 
+    price: 69.99, image: 'manage.jpg' },
 ];
 
 const useCarousel = (totalSlides: number, autoplayInterval = 4000) => {

@@ -12,22 +12,22 @@ interface SlideData {
 
 const slideData: SlideData[] = [
   {
-    image: '/about1.jpg',
+    image: 'about1.jpg',
     title: 'We rank among the best Globally...',
     description: 'With expertise in the area of business such as sales of all kind properties, sales of investment in real-estate, Sales of household security door handle and more….',
   },
   {
-    image: '/landcracker.jpg',
+    image: 'landcracker.jpg',
     title: 'Integrity and transparency',
     description: 'Our vision is to operate with integrity and transparency, Customer-centric, maximizing revenue opportunities both ways, Building Strong Partnerships and staying ahead of market trends and also deploying technological advancements including Data-driven for decisions.',
   },
   {
-    image: '/landb.jpg',
+    image: 'landb.jpg',
     title: 'Our Mission',
     description: ' Is to be the most leading solution provider in real-estate and sales as a whole.',
   },
   {
-    image: '/comandres.jpg',
+    image: 'comandres.jpg',
     title: 'Our value',
     description: ' •	Excellence: we place excellent priorities on our customer service by meeting our customer expectations with our unique solutions Professional • Team: We deploy the best working team who understand work ethics in managing customer requests effectively and efficiently with the aim of meeting clients exact needs.',
   },

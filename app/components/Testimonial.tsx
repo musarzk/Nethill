@@ -97,14 +97,14 @@ const Testimonials = () => {
         {/* Navigation Arrows */}
         <button
           onClick={() => handleScroll("prev")}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-200 text-gray-800 p-3 rounded-full shadow-md hover:bg-gray-300"
+          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-200 text-gray-800 p-3 rounded-full shadow-md hover:bg-gray-300"
           aria-label="Previous Slide"
         >
           <FaChevronLeft size={24} />
         </button>
         <button
           onClick={() => handleScroll("next")}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-200 text-gray-800 p-3 rounded-full shadow-md hover:bg-gray-300"
+          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-200 text-gray-800 p-3 rounded-full shadow-md hover:bg-gray-300"
           aria-label="Next Slide"
         >
           <FaChevronRight size={24} />

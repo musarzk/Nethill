@@ -86,7 +86,7 @@ export function Footer() {
       </div>
       <AiOutlineArrowUp
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="absolute right-10 bottom-10 text-black text-4xl cursor-pointer animate-bounce"
+        className="absolute right-10 bottom-20 text-black text-4xl cursor-pointer animate-bounce"
       />
     </footer>
   );

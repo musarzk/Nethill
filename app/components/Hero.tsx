@@ -126,7 +126,7 @@ const heroData = [
   {
     id: 1,
     type: 'image',
-    src: '/hero-background01.jpg',
+    src: 'hero-background01.jpg',
     title: 'Welcome to Nethill Ltd',
     subtitle: 'The Most Reliable Real-estate firm, Sales and More...',
   },
@@ -147,14 +147,14 @@ const heroData = [
   {
     id: 4,
     type: 'video',
-    src: 'UpBmpJiMZIc', // YouTube video ID
+    src: 'https://youtu.be/UpBmpJiMZIc', // YouTube video ID
     title: 'Innovative Solutions',
     subtitle: 'We create a future of endless possibilities',
   },
   {
     id: 5,
     type: 'image',
-    src: '/hero-background1.jpg',
+    src: 'hero-background1.jpg',
     title: 'Connect with professionals',
     subtitle: 'With high integrity and values for your needs.',
   },
