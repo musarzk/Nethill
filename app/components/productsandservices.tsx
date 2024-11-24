@@ -192,8 +192,38 @@ const useCarousel = (totalSlides: number, autoplayInterval = 4000) => {
 };
 
 export default function ProductCarousel() {
-  const totalSlides = products.length;
+  const [cardsPerSlide, setCardsPerSlide] = useState(5);
+  const totalSlides = Math.ceil(products.length / cardsPerSlide);
   const { currentIndex, scrollTo, handleTransitionEnd, nextSlide, prevSlide, isTransitioning } = useCarousel(totalSlides);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setCardsPerSlide(5);
+      } else if (window.innerWidth >= 768) {
+        setCardsPerSlide(3);
+      } else {
+        setCardsPerSlide(1);
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const getProductsForSlide = (slideIndex: number) => {
+    const startIndex = slideIndex * cardsPerSlide;
+    const endIndex = startIndex + cardsPerSlide;
+    const slideProducts = [];
+
+    for (let i = 0; i < cardsPerSlide; i++) {
+      const productIndex = (startIndex + i) % products.length;
+      slideProducts.push(products[productIndex]);
+    }
+
+    return slideProducts;
+  };
 
   return (
     <section className="bg-white py-16">
@@ -208,57 +238,69 @@ export default function ProductCarousel() {
             }}
             onTransitionEnd={handleTransitionEnd}
           >
-            {products.map((product) => (
-              <div key={product.id} className="w-full flex-shrink-0 px-2">
-                <div className="h-full flex flex-col bg-white border border-gray-200 rounded-lg shadow">
-                  <div className="p-4 flex-grow">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      width={400}
-                      height={300}
-                      className="w-full h-48 object-cover mb-4 rounded"
-                    />
-                    <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
-                    <p className="text-sm text-gray-600 mb-2 line-clamp-2">
-                      {product.description}
-                    </p>
-                    <Link href={`/product/${product.id}`} className="text-sm text-blue-600 hover:underline">
-                      Read more...
-                    </Link>
+            {Array.from({ length: totalSlides }).map((_, slideIndex) => (
+              <div key={slideIndex} className="w-full flex flex-wrap">
+                {getProductsForSlide(slideIndex).map((product) => (
+                  <div key={product.id} className={`p-2 ${
+                    cardsPerSlide === 5 ? 'w-1/5' : 
+                    cardsPerSlide === 3 ? 'w-1/3' : 
+                    'w-full'
+                  }`}>
+                    <div className="h-full flex flex-col bg-white border border-gray-200 rounded-lg shadow-md">
+                      <div className="p-4 flex-grow">
+                        <Image
+                          src={product.image}
+                          alt={product.name}
+                          width={400}
+                          height={300}
+                          className="w-full h-40 object-cover mb-4 rounded-md"
+                        />
+                        <h3 className="text-lg font-semibold mb-2 text-gray-800">{product.name}</h3>
+                        <p className="text-sm text-gray-600 mb-4 line-clamp-2">
+                          {product.description}
+                        </p>
+                        <Link 
+                          href={`/product/${product.id}`} 
+                          className="text-sm text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200"
+                        >
+                          Read more...
+                        </Link>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
             ))}
           </div>
         </div>
 
-        {/* Navigation Arrows */}
         <button
-          className="absolute top-1/2 -left-4 sm:left-0 transform -translate-y-1/2 bg-gray-300 text-white rounded-full p-2 hover:bg-gray-400"
+          className="absolute top-1/2 -left-4 sm:left-0 transform -translate-y-1/2 bg-gray-300 text-white rounded-full p-2 hover:bg-gray-400 transition-colors duration-200"
           onClick={prevSlide}
           disabled={isTransitioning}
+          aria-label="Previous slide"
         >
           <AiOutlineLeft className="w-6 h-6" />
         </button>
         <button
-          className="absolute top-1/2 -right-4 sm:right-0 transform -translate-y-1/2 bg-gray-300 text-white rounded-full p-2 hover:bg-gray-400"
+          className="absolute top-1/2 -right-4 sm:right-0 transform -translate-y-1/2 bg-gray-300 text-white rounded-full p-2 hover:bg-gray-400 transition-colors duration-200"
           onClick={nextSlide}
           disabled={isTransitioning}
+          aria-label="Next slide"
         >
           <AiOutlineRight className="w-6 h-6" />
         </button>
 
-        {/* Slide Indicators */}
         <div className="flex justify-center mt-4 space-x-2">
-          {products.map((_, index) => (
+          {Array.from({ length: totalSlides }).map((_, index) => (
             <button
               key={index}
-              className={`w-3 h-3 rounded-full ${
+              className={`w-3 h-3 rounded-full transition-colors duration-200 ${
                 currentIndex === index ? 'bg-blue-600' : 'bg-gray-300'
               }`}
               onClick={() => scrollTo(index)}
               disabled={isTransitioning}
+              aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>
