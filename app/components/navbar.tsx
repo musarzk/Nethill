@@ -27,7 +27,7 @@ export default function Header() {
             </span>
             <span className="flex items-center space-x-1">
               <AiOutlineMail className="inline-block mr-1" />
-              <span>info@nethill.com.ng</span>
+              <span>info@nethillreality.com</span>
             </span>
           </div>
 
