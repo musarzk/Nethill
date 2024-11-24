@@ -128,6 +128,7 @@ const heroData = [
     type: 'image',
     src: 'hero-background01.jpg',
     title: 'Welcome to Nethill Ltd',
+    register: 'RC no: 168235',
     subtitle: 'The Most Reliable Real-estate firm, Sales and More...',
   },
   {
@@ -219,6 +220,7 @@ export default function HeroSection() {
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           {heroData[currentSlide]?.title}
         </h1>
+        <div className="text-lg md:text-xl">{heroData[currentSlide]?.register}</div>
         <p className="text-lg md:text-2xl mb-6">
           {heroData[currentSlide]?.subtitle}
         </p>
