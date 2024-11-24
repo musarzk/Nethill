@@ -194,7 +194,7 @@ const originalProducts = [
     description: 'Ready to turn your house into your dream home?.', 
     price: 59.99, 
     image: 'interior.jpg' },
-    
+
   { id: 6, name: 'Project and property management', 
     description: 'Looking for a partner to streamline your property and project needs?.', 
     price: 69.99, image: 'manage.jpg' },
@@ -301,9 +301,9 @@ export default function ProductCarousel() {
                     Read more...
                   </Link>
                 </div>
-                <div className="p-4 bg-gray-50 border-t border-gray-200 mt-auto">
+                {/* <div className="p-4 bg-gray-50 border-t border-gray-200 mt-auto">
                   <p className="text-lg font-bold text-gray-800">N{product.price.toFixed(2)}</p>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
