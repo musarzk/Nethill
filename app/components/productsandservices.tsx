@@ -232,7 +232,7 @@ export default function ProductCarousel() {
 
   const getProductsForSlide = (slideIndex: number) => {
     const startIndex = slideIndex * cardsPerSlide;
-    const endIndex = startIndex + cardsPerSlide;
+    
     const slideProducts = [];
 
     for (let i = 0; i < cardsPerSlide; i++) {
