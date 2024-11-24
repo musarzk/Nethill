@@ -5,7 +5,7 @@ import Image from "next/image";
 const testimonialsData = [
   {
     id: 1,
-    name: "John Doe",
+    name: "John David",
     feedback:
       "This company is reliable and highly recommended for real estate transactions!",
     image: "testimo6.jpg",
