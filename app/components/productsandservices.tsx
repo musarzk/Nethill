@@ -295,7 +295,7 @@ export default function ProductCarousel() {
                     {product.description}
                   </p>
                   <Link 
-                    href={`/product/${product.id}`} 
+                    href={`product/${product.id}`} 
                     className="text-sm text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200"
                   >
                     Read more...
