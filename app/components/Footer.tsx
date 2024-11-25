@@ -85,9 +85,7 @@ export function Footer() {
         </div>
       </div>
       <AiOutlineArrowUp
-        onClick={() => document.getElementById('navbar')?.scrollIntoView({
-          behavior: 'smooth',
-        })}
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         className="absolute right-10 bottom-20 text-black text-4xl cursor-pointer animate-bounce"
       />
     </footer>
