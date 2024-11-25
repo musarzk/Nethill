@@ -15,7 +15,7 @@ export default function Header() {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50">
+    <div id='navbar' className="fixed top-0 left-0 w-full z-50">
       {/* Top Header with Contact Info */}
       <header className="bg-red-600 text-white text-center p-1">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-3 md:space-y-0 md:space-x-6 px-4">
