@@ -53,7 +53,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto mt-12 flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="flex flex-col md:flex-row items-center gap-4">
           <h1 className="text-3xl font-bold font-['Archivo_Black']">Nethill Ltd</h1>
-          <p className="text-sm">Copyright© 2024 All right Reserved</p>
+          <p className="text-sm">Copyright© <script>document.write(new Date().getFullYear())</script> All right Reserved</p>
         </div>
 
         {/* Social Links */}
