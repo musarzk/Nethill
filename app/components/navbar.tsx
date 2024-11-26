@@ -23,7 +23,7 @@ export default function Header() {
           <div className="text-base flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4 lg:pl-40 leading-tight sm:leading-5">
             <span className="flex items-center space-x-1">
               <AiOutlinePhone className="inline-block mr-1" size={20}  />
-              <div>+2348035961225, +2347038342391</div>
+              <div>+2348035961225, +2347039342391</div>
             </span>
             <span className="flex items-center space-x-1">
               <AiOutlineMail className="inline-block mr-1" />
