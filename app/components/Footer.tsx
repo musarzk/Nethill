@@ -6,6 +6,7 @@ import Link from "next/link";
 import { AiFillFacebook, AiFillInstagram, AiFillYoutube, AiOutlineEnvironment, AiOutlineArrowUp } from "react-icons/ai";
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <footer id="footer" className="bg-[#d3ede1] px-6 py-12 rounded-t-3xl relative">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -53,7 +54,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto mt-12 flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="flex flex-col md:flex-row items-center gap-4">
           <h1 className="text-3xl font-bold font-['Archivo_Black']">Nethill Ltd</h1>
-          <p className="text-sm">Copyright© 2024 All right Reserved</p>
+          <p className="text-sm">Copyright&copy; {currentYear} All right Reserved</p>
         </div>
 
         {/* Social Links */}
